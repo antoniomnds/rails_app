@@ -7,6 +7,14 @@
   <%= link_to "Back to articles", articles_path %>
 
   <p>
-    <%= button_to "Destroy this article", @article, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+    <%= button_to "Destroy this article",
+                  @article,
+                  method: :delete,
+                  form: {
+                    data: {
+                      turbo_confirm: 'Are you sure?'
+                    }
+                  }
+    %>
   </p>
 </div>
